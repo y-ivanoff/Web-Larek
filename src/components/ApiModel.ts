@@ -1,7 +1,7 @@
 import { IOrder, IOrderResult, IProductItem } from "../types";
 import { Api, ApiListResponse} from "./base/api";
 
-export class LarekApi extends Api {
+export class ApiModel extends Api {
   cdn: string;
 
   constructor(cdn: string, baseUrl: string, options?: RequestInit) {

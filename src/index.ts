@@ -2,7 +2,7 @@ import './scss/styles.scss';
 
 import { EventEmitter } from './components/base/events';
 import { API_URL, CDN_URL } from './utils/constants';
-import { LarekApi } from './components/LarekApi';
+import { ApiModel } from './components/ApiModel';
 import { cloneTemplate, ensureElement } from './utils/utils';
 import { AppData, Product } from './components/AppData';
 import { Page } from './components/Page';
@@ -14,7 +14,7 @@ import { IOrderForm } from './types';
 import { Success } from './components/common/Success';
 
 const emitter = new EventEmitter();
-const api = new LarekApi(CDN_URL, API_URL);
+const api = new ApiModel(CDN_URL, API_URL);
 
 emitter.onAll(({ eventName, data }) => {
   console.log(eventName, data);
